@@ -6,6 +6,12 @@
     <title>To do List</title>
 </head>
 <body>
-    <h1>It is a <%= kindOfday %> !</h1>
+    
+    <!-- <% scriptlet tag:- Only Flow Statement NOT showing OUTPUT  (Not JS) -->
+    <% if(kindOfday===0 || kindOfday===1){ %>
+        <h1 style="color:tomato"> <%= kindOfday %> ToDo List</h1>  
+        <% }else{  %>
+        <h1 style="color:rgb(185, 185, 135)"> <%= kindOfday %> ToDo List</h1> 
+    <%}%>
 </body>
 </html>

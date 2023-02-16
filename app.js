@@ -10,12 +10,13 @@ app.get("/",function(req,res){
 
     var date=new Date();
     var currDay= date.getDay();
-    if(!currDay==0 || !currDay==6){
-        res.write("Yaay Weekend");
+    var day="";
+    if(currDay==0 || currDay==6){
+        day="WeekEnd";
     }else{
-        res.write("Opps Workday");
+        day="WeekDay";
     }
-    res.send();
+    res.render("list",{kindOfday:day});
 
 });
 

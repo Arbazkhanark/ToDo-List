@@ -1,9 +1,10 @@
 const express=require("express");
 const bodyParser=require("body-parser");
+const ejs=require("ejs");   // Require EJS After install   (npm i ejs)
 
 const app=express();
+app.set('view engine','ejs');  //  app will set EJS:- It will check views files for EJS
 
-app.use(ejs);
 
 app.get("/",function(req,res){
 
